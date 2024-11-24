@@ -267,6 +267,8 @@ https://www.youtube.com/watch?v=8ommGcs_-VU
 https://docs.google.com/document/d/17D2RuUKAftM9OVs_tIe0Qie3Bs8CwT4MuukEn-1g6U8/edit?tab=t.0
 
 https://www.youtube.com/watch?v=8vRotLNvXmg
+https://www.youtube.com/watch?v=9gDdZOfoy9s
+
 
 oTToDev N8N Chat Interface Prompts
 

@@ -257,3 +257,74 @@ Here are some tips to get the most out of Bolt.new:
 - **Scaffold the basics first, then add features**: Make sure the basic structure of your application is in place before diving into more advanced functionality. This helps Bolt understand the foundation of your project and ensure everything is wired up right before building out more advanced functionality.
 
 - **Batch simple instructions**: Save time by combining simple instructions into one message. For example, you can ask Bolt to change the color scheme, add mobile responsiveness, and restart the dev server, all in one go saving you time and reducing API credit consumption significantly.
+
+
+
+
+
+!Important resources
+https://www.youtube.com/watch?v=8ommGcs_-VU
+https://docs.google.com/document/d/17D2RuUKAftM9OVs_tIe0Qie3Bs8CwT4MuukEn-1g6U8/edit?tab=t.0
+
+https://www.youtube.com/watch?v=8vRotLNvXmg
+
+oTToDev N8N Chat Interface Prompts
+
+Prompt #1: 
+
+Create a Next.js chat interface where I can send in a message and it replies back with a sample message.
+
+Prompt #2: 
+
+Next, add the following UI/UX features:
+
+UI Requirements:
+1. Full-page dark theme layout with:
+  - Header (60px height, background: #0F172A) with app title in Inter font, #F8FAFC
+  - Main chat area with deep background #020617
+  - Fixed input area with #1E293B background and subtle #334155 top border
+2. Message display:
+  - User messages: Right-aligned, background #3B82F6, text #FFFFFF
+  - AI responses: Left-aligned, background #334155, text #E2E8F0
+  - Timestamps in #64748B, 12px font size
+  - Maximum message width: 80% of container
+  - Message padding: 12px 16px
+  - Border radius: 12px
+  - Gap between messages: 16px
+3. Loading indicator:
+  - Three bouncing dots animation
+  - Color: #94A3B8
+  - Subtle fade in/out
+4. Responsive design:
+  - Desktop: 90% width, max-width 1200px
+  - Mobile: 100% width, 12px padding
+
+UX Features:
+1. Message input:
+  - Dark textarea with #334155 background
+  - Border: 1px solid #475569
+  - Focus border: #3B82F6
+  - Placeholder text color: #64748B
+  - Send button: #3B82F6 (hover: #2563EB)
+  - Height: 44px base
+2. Message area:
+  - Subtle dark scrollbar (#1E293B track, #334155 thumb)
+  - Smooth scroll behavior
+  - Bottom padding: 24px
+3. Visual feedback:
+  - Send button loading state: opacity 0.7
+  - Error messages: #DC2626 background with #FFFFFF text
+  - New message fade-in animation
+  - Disabled input state during AI response
+
+For now just have the AI agent respond with the text "This is a sample message" after waiting 2 seconds with the loading indicator.
+
+Prompt #3 (keep in mind the placeholders you need to fill in):
+
+Now use this API endpoint to get the response from the LLM:
+
+[Insert your production N8N webhook URL or really any API endpoint for an agent]
+
+The payload needs to have sessionId (random UUID generated when the component loads) and chatInput (the latest user input). Also the bearer token for authorization is [Insert your token here, or you can not have header auth enabled]. Then the “output” field of the JSON response has the response from the LLM to display in the chat to the user.
+
+
